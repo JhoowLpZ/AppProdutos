@@ -25,7 +25,7 @@
 
                   <tbody>
                     <tr *ngFor="let produto of produtos">
-                      <td>{{produto.codigo}}</td>
+                      <td>{{produto.id}}</td>
                       <td>{{produto.nomeProduto}}</td>
                       <td>{{produto.categoria}}</td>
                       <td class="text-center">
@@ -35,7 +35,7 @@
                         <button type="button" class="btn btn-icons-actions btn-outline-blue" title="Visualizar" (click)="editarProduto(produto, true)">
                             <i class="bi bi-eye"></i>
                         </button>
-                        <button type="button" class="btn btn-icons-actions btn-outline-blue" title="Excluir" (click)="excluirProduto()">
+                        <button type="button" class="btn btn-icons-actions btn-outline-blue" title="Excluir" (click)="perguntarRemoverProduto(produto)">
                             <i class="bi bi-trash"></i>
                         </button>
                       </td>

@@ -5,10 +5,10 @@
             <div class="row">
                 
                 <div class="col-md-2">
-                    <label for="codigo" class="col-form-label col-form-label-sm">
+                    <label for="id" class="col-form-label col-form-label-sm">
                         Código <span class="text-danger">*</span>
                     </label>
-                    <input type="number" class="form-control form-control-sm" id="codigo" name="codigo" formControlName="codigo" readonly> 
+                    <input type="number" class="form-control form-control-sm" id="id" name="id" formControlName="id" readonly> 
                 </div>
                 
                 <div class="col-md-7">
@@ -23,9 +23,9 @@
                         Categoria <span class="text-danger">*</span>
                     </label>
                     <select class="form-select form-select-sm" id="categoria" name="categoria" formControlName="categoria">
-                        <option value="Atacado">Atacado</option>
-                        <option value="Internacional">Internacional</option>
-                        <option value="Varejo">Varejo</option>
+                        <option value="ATACADO">ATACADO</option>
+                        <option value="INTERNACIONAL">INTERNACIONAL</option>
+                        <option value="VAREJO">VAREJO</option>
                     </select>
                 </div>
                 
@@ -39,7 +39,7 @@
                 <button class="btn btn-sm btn-outline-secondary me-md-2" type="button" (click)="voltar()">
                     <i class="bi bi-reply-fill"></i> Retornar
                 </button>
-                <button class="btn btn-sm btn-outline-blue me-md-2" type="submit">
+                <button class="btn btn-sm btn-outline-blue me-md-2" type="submit" [hidden]="parentComponent.visualizar">
                     <i class="bi bi-check2"></i> Gravar
                 </button>
               </div>

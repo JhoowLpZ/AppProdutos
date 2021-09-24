@@ -6,6 +6,7 @@ import { ProdutosService } from "../produtos.service";
 import { Produto } from "src/app/shared/models/produtos.model";
 
 import { ProdutosComponent } from "../produtos.component";
+import Swal from "sweetalert2";
 
 @Component({
     selector: 'app-lista-produtos',
@@ -22,7 +23,7 @@ export class ListaProdutosComponent implements OnInit{
         private parentComponent: ProdutosComponent){}
 
     ngOnInit(): void {
-        this.produtosService.obterProdutos().then(produtos => this.produtos = produtos);
+        this.produtosService.obterProdutos().subscribe(produtos => this.produtos = produtos);
     }
 
     incluirProduto(){
@@ -36,5 +37,21 @@ export class ListaProdutosComponent implements OnInit{
         this.router.navigate(['produtos/editar']);
     }
 
-    excluirProduto(){}
+    perguntarRemoverProduto(produto: Produto){
+        Swal.fire({
+            title: 'Deseja excluir o produto?',
+            text: "Você não será capaz de reverter isso!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#004990',
+            cancelButtonText: 'Não',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, desejo excluir!'
+          }).then((result) => {
+            if (result.isConfirmed) 
+                this.produtosService.excluirProduto(produto.id).subscribe(x => {
+                    this.produtos.splice(this.produtos.indexOf(produto), 1);
+                });
+          })
+    }
 }

@@ -15,7 +15,7 @@ import { EditarProdutosComponent } from './editar-produtos/editar-produtos.compo
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    ProdutosRoutingModule
+    ProdutosRoutingModule,
   ],
   declarations: [
     ProdutosComponent,
