@@ -1,0 +1,48 @@
+<form [formGroup]="produtoForm" (ngSubmit)="atualizarProduto()">
+
+    <div class="card mb-2">
+        <div class="card-body">
+            <div class="row">
+                
+                <div class="col-md-2">
+                    <label for="codigo" class="col-form-label col-form-label-sm">
+                        Código <span class="text-danger">*</span>
+                    </label>
+                    <input type="number" class="form-control form-control-sm" id="codigo" name="codigo" formControlName="codigo" readonly> 
+                </div>
+                
+                <div class="col-md-7">
+                    <label for="nomeProduto" class="col-form-label col-form-label-sm">
+                        Nome do Produto <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control form-control-sm" id="nomeProduto" name="nomeProduto" formControlName="nomeProduto"> 
+                </div>
+
+                <div class="col-md-3">
+                    <label for="categoria" class="col-form-label col-form-label-sm">
+                        Categoria <span class="text-danger">*</span>
+                    </label>
+                    <select class="form-select form-select-sm" id="categoria" name="categoria" formControlName="categoria">
+                        <option value="Atacado">Atacado</option>
+                        <option value="Internacional">Internacional</option>
+                        <option value="Varejo">Varejo</option>
+                    </select>
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-sm btn-outline-secondary me-md-2" type="button" (click)="voltar()">
+                    <i class="bi bi-reply-fill"></i> Retornar
+                </button>
+                <button class="btn btn-sm btn-outline-blue me-md-2" type="submit">
+                    <i class="bi bi-check2"></i> Gravar
+                </button>
+              </div>
+        </div>
+    </div>
+</form>

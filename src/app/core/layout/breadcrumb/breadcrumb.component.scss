@@ -12,9 +12,9 @@ h4 {
         font-size: 12px;
 
         .breadcrumb-item+.breadcrumb-item::before {
-            content: "\e649";
-            font-family: themify;
-            color: #000;
+            content: "\f285";
+            font-family: bootstrap-icons;
+            color: #004990;
             font-size: 11px;
         }
 

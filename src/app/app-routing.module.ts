@@ -9,6 +9,7 @@ const routes: Routes = [
     canActivate: [],
     children: [
       { path: '', loadChildren: () => import('./features/telainicial/telainicial.module').then(m => m.TelaInicialModule) },
+      { path: 'produtos', loadChildren: () => import('./features/produtos/produtos.module').then(m => m.ProdutosModule) }
     ]
   }
 ];
