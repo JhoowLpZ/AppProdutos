@@ -1,11 +1,11 @@
 
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center border-bottom">
-    <!-- <h2>{{pageInfo?.title}}</h2> -->
-    <h3>Dashboard</h3>
-    <!-- <div class="d-flex align-items-center">
+
+<div class="page-breadcrumb">
+    <h4>{{infoPagina?.title}}</h4>
+    <div class="d-flex align-items-center">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <ng-template ngFor let-url [ngForOf]="pageInfo?.urls" let-last="last">
+                <ng-template ngFor let-url [ngForOf]="infoPagina?.urls" let-last="last">
                     <li class="breadcrumb-item" *ngIf="!last" [routerLink]="url.url">
                         <a href='javascript:void(0)'>{{url.title}}</a>
                     </li>
@@ -13,5 +13,5 @@
                 </ng-template>
             </ol>
         </nav>
-    </div> -->
+    </div>
 </div>

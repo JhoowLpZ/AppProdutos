@@ -7,7 +7,9 @@ const routes: Routes = [
     path: '', 
     component: LayoutComponent,
     canActivate: [],
-    children: []
+    children: [
+      { path: '', loadChildren: () => import('./features/telainicial/telainicial.module').then(m => m.TelaInicialModule) },
+    ]
   }
 ];
 

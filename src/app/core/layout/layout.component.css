@@ -17,6 +17,7 @@
 
 .sidebar {
     position: fixed;
+    background-color: #fff !important;
     top: 0;
     bottom: 0;
     left: 0;
@@ -67,11 +68,5 @@
 }
 
 /* MAIN */
-
-.page-wrapper {
-    background: #dce2ee93;
-    height: 95vh;
-}
-
 
 .dropdown-toggle { outline: 0; }

@@ -1,0 +1,22 @@
+h4 {
+    color: #004990
+}
+
+.page-breadcrumb {
+    margin-bottom: 10px;  
+
+    .breadcrumb {
+        padding: 0px;
+        margin: 0px;
+        background: transparent;
+        font-size: 12px;
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            content: "\e649";
+            font-family: themify;
+            color: #000;
+            font-size: 11px;
+        }
+
+    }
+}
