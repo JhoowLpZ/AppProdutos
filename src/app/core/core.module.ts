@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from '../app-routing.module';
+import { BreadcrumbComponent } from './layout/breadcrumb/breadcrumb.component';
 
 import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
     declarations: [
-        LayoutComponent
+        LayoutComponent,
+        BreadcrumbComponent
     ],
     imports: [
         // NgbModule,
+        AppRoutingModule,
         // CommonModule,
         BrowserModule
     ],
     exports: [
-        LayoutComponent
+        LayoutComponent,
+        BreadcrumbComponent
     ],
     providers: []
 })

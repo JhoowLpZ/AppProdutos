@@ -1,3 +1,55 @@
-<div>
-    Olá mundo!
+<header class="navbar navbar-light sticky-top bg-orange flex-md-nowrap p-0 shadow">
+    <span class="d-flex justify-content-center col-md-3 col-lg-2  " href="#">
+        <img src="assets/images/itau-2.png" alt="homepage" class="logo"/> 
+        <h5 class="text-logo">Itaú Desafios</h5>
+    </span>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</header>
+  
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav nav-pills flex-column mb-auto flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-grid-1x2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-basket"></i> Produtos
+                        </a>
+                    </li>
+                </ul>
+  
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Extras</span>
+                </h6>
+
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/JhoowLpZ/AppProdutos" target="_blank">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/jhonatan-lopes-de-oliveira-1bb2aa161/" target="_blank">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+  
+        <main class="page-wrapper col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3">
+            <app-breadcrumb></app-breadcrumb>
+            
+            <div class="container-fluid pb-5">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+    </div>
 </div>
