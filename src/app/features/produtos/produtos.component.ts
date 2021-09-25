@@ -8,6 +8,7 @@ import { Produto } from "src/app/shared/models/produtos.model";
 export class ProdutosComponent {
 
     produtoSelecionado: Produto = {} as Produto;
+    todosProdutos: Produto[] = [];
     visualizar: boolean = false;
 
 }

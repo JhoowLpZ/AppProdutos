@@ -43,7 +43,7 @@ export class ProdutosService {
     );
   }
 
-  private log(title: string, mensagem: string, error: boolean) {
+  private log(title: string, mensagem: string, error: boolean): void {
     Swal.fire({
       icon: error ? 'error' : 'success',
       title: title,

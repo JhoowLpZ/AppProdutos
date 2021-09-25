@@ -22,14 +22,14 @@ const routes: Routes = [
         component: IncluirProdutosComponent, 
         data: {
             title: 'Produtos', 
-            urls: [{title: 'Home', url: '/'},{title: 'Lista', url: '/produto'},{title: 'Incluir Produto'}]
+            urls: [{title: 'Home', url: '/'},{title: 'Lista', url: '/produtos'},{title: 'Incluir Produto'}]
         }
     },{
         path: 'editar', 
         component: EditarProdutosComponent, 
         data: {
             title: 'Produtos', 
-            urls: [{title: 'Home', url: '/'},{title: 'Lista', url: '/produto'},{title: 'Editar Produto'}]
+            urls: [{title: 'Home', url: '/'},{title: 'Lista', url: '/produtos'},{title: 'Editar Produto'}]
         }
     }]
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder } from "@angular/forms";
+import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
 import { Produto } from "src/app/shared/models/produtos.model";
@@ -22,16 +22,16 @@ export class EditarProdutosComponent implements OnInit{
         public parentComponent: ProdutosComponent){}
 
     public produtoForm = this.fb.group({
-        id: [null],
-        nomeProduto: [null],
-        categoria: [null]
+        id: [null, Validators.required],
+        nomeProduto: [null, Validators.required],
+        categoria: [null, Validators.required]
     });
 
     ngOnInit(): void {
         this.preencherFormulario(this.parentComponent.produtoSelecionado);
     }
 
-    preencherFormulario(produto: Produto){
+    preencherFormulario(produto: Produto) : void{
         if(this.parentComponent.visualizar)
             this.produtoForm.disable();
 
@@ -42,13 +42,18 @@ export class EditarProdutosComponent implements OnInit{
         });
     }
 
-    atualizarProduto(){
+    atualizarProduto() : void{
         let prop : Produto = Object.assign({} as Produto, this.produtoForm.getRawValue());
 
+        if(this.produtoForm.invalid){
+            Swal.fire('Ops! Formulário Incorreto!', 'Preencha todos os campos obrigatórios!', 'error');
+            return;
+        } 
+        
         this.produtosService.editarProduto(prop).subscribe(() => this.voltar());
     }
 
-    voltar(){
+    voltar(): void{
         this.router.navigate(['produtos/']);
     }
 }

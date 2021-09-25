@@ -3,7 +3,7 @@
 
 .logo {
     width: 2.7rem;
-    margin: 1px 0px 1px 10px;
+    margin: 3px 0px 3px 10px;
 }
 
 .text-logo {
@@ -35,9 +35,9 @@
     color: #ffffff;
 }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
+.nav-link:hover {
+    color: #fff22d !important;
+    background-color: #004990;
 }
 
 .sidebar-heading {
@@ -56,11 +56,6 @@
     padding: .75rem 1rem;
     border-width: 0;
     border-radius: 0;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff22d;
-    background-color: #004990;
 }
 
 .bg-orange {
