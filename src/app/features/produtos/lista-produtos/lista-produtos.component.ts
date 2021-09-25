@@ -16,6 +16,9 @@ import { FormBuilder } from "@angular/forms";
 
 export class ListaProdutosComponent implements OnInit{
 
+    public pageSize: number = 5;
+    public page: number = 1;
+
     public produtos: Produto[] = [];
 
     constructor(

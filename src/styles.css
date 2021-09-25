@@ -6,6 +6,21 @@ thead {
     border-style: hidden;
 }
 
+.page-link {
+    color: #004990;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #004990;
+    border-color: #004990;
+}
+
+.sr-only{
+    display: none;
+}
+
 .text-blue {
     color: #004990;
 }

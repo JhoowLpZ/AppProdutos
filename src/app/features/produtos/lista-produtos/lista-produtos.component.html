@@ -44,7 +44,7 @@
               </thead>
 
               <tbody>
-                <tr *ngFor="let produto of produtos">
+                <tr *ngFor="let produto of produtos | slice: (page-1) * pageSize : page * pageSize">
                   <td>{{produto.id}}</td>
                   <td>{{produto.nomeProduto}}</td>
                   <td>{{produto.categoria}}</td>
@@ -63,6 +63,13 @@
               </tbody>
         
         </table>
+
+        <ngb-pagination
+          [(page)]="page"
+          size="sm"
+          [pageSize]="pageSize"
+          [collectionSize]="produtos.length">
+        </ngb-pagination>
       </div>
 
     </div>
