@@ -79,7 +79,7 @@ export class ListaProdutosComponent implements OnInit{
             if (result.isConfirmed) 
                 this.produtosService.excluirProduto(produto.id).subscribe(x => {
                     this.parentComponent.todosProdutos.splice(this.parentComponent.todosProdutos.indexOf(produto), 1);
-                    this.produtos.splice(this.produtos.indexOf(produto), 1);
+                    this.filtrar();
                 });
           })
     }
