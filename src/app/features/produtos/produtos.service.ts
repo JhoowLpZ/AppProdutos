@@ -57,7 +57,7 @@ export class ProdutosService {
     return (error: any): Observable<T> => {
   
       this.log(`Operação não realizada!`,`Ocorreu uma falha ao ${operacao} o produto!`, true);
-      console.error(error);
+      // console.error(error);
   
       return of(result as T);
     };
